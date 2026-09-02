@@ -1,6 +1,6 @@
-# ZeroUp Developers — app-ads.txt (yagona manba)
-# Bu faylning MAZMUNI ytcodemasterr.blogspot.com/app-ads.txt ga ko'chiriladi,
-# chunki Play Store'dagi "Веб-сайт" maydoni o'sha domenni ko'rsatadi.
+# ZeroUp Developers — app-ads.txt
+# https://zeroup.uz/app-ads.txt
+# Play Console'dagi "Веб-сайт" maydoni shu domenni ko'rsatishi shart.
 # Yangi tarmoq qo'shilganda uning qatorlari shu yerga qo'shiladi.
 
 # ── Google AdMob ────────────────────────────────────────────────
