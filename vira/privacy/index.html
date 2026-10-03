@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en" data-l="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vira — Privacy Policy</title>
+<meta name="description" content="How the Vira language-learning app collects, uses and deletes your data.">
+<style>
+  :root {
+    --bg: #f7f5ff; --card: #ffffff; --text: #1d1640; --muted: #5e577f;
+    --brand: #2d1a78; --accent: #6c4cf5; --line: #e4defa;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #120a30; --card: #1c1245; --text: #efeaff; --muted: #b3a9d9;
+      --brand: #c9b8ff; --accent: #a58bff; --line: #2e2168;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 24px 16px 64px; }
+  header { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  .logo { font-weight: 900; font-size: 22px; color: var(--brand); letter-spacing: .5px; }
+  nav { display: flex; gap: 6px; }
+  nav button {
+    border: 1.5px solid var(--line); background: var(--card); color: var(--text);
+    border-radius: 99px; padding: 6px 14px; font: inherit; font-weight: 700; cursor: pointer;
+  }
+  nav button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+  article { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 24px 20px; margin-top: 20px; }
+  h1 { font-size: 28px; line-height: 1.25; margin: 0 0 4px; }
+  h2 { font-size: 19px; margin: 28px 0 8px; color: var(--brand); }
+  .date { color: var(--muted); margin: 0 0 16px; }
+  ul { padding-left: 22px; }
+  li { margin: 4px 0; }
+  a { color: var(--accent); }
+  .note { background: var(--bg); border-left: 4px solid var(--accent); padding: 10px 14px; border-radius: 8px; }
+  [data-t] { display: none; }
+  html[data-l="en"] [data-t="en"], html[data-l="uz"] [data-t="uz"], html[data-l="ru"] [data-t="ru"] { display: block; }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <div class="logo">Vira</div>
+  <nav aria-label="Language">
+    <button data-set="uz">O'zbek</button>
+    <button data-set="en">English</button>
+    <button data-set="ru">Русский</button>
+  </nav>
+</header>
+
+<!-- ───────────────────────── ENGLISH ───────────────────────── -->
+<article data-t="en" lang="en">
+<h1>Privacy Policy</h1>
+<p class="date">Effective 27 September 2026</p>
+<p>This policy explains what data the <b>Vira</b> language-learning app (Android, package <code>uz.zeroup.vira</code>) collects, why, who processes it, and how you can delete it. Vira is developed by <b>ZeroUp</b> (Uzbekistan). Contact: <a class="email" href="mailto:zeroupdevelopers@gmail.com">zeroupdevelopers@gmail.com</a>.</p>
+
+<h2>1. Data we collect</h2>
+<ul>
+  <li><b>Account.</b> When you sign in with Google: your email address, name, profile photo and a Google account identifier. We create an internal user ID for you.</li>
+  <li><b>Profile you set.</b> Nickname, country (you pick it; we do not detect it from your IP), and the looks you equip (avatar frame, passport cover, title, stamp ink).</li>
+  <li><b>Learning activity.</b> Languages you study, lesson progress and answers, XP, level, streak, energy, coins, achievements and items bought with coins.</li>
+  <li><b>Chat.</b> Messages you send in the world chat, private chats and groups; people you block; reports you send. World-chat messages are deleted automatically after 7 days.</li>
+  <li><b>AI tutor.</b> Your question is sent to our AI provider only to generate the answer. We do <b>not</b> store the text of your questions or of the answers — only usage counts (mode, language, time, length) to enforce daily limits. If you report an answer, we store that answer and your question so we can review it.</li>
+  <li><b>Purchases.</b> If you subscribe to Premium, Google Play handles the payment; we never see your card. We receive and store the purchase token, product, plan, status and expiry date to activate Premium.</li>
+  <li><b>Device and technical data.</b> Settings such as sound and app language are stored on your device. Our servers keep short-lived technical logs (for example IP address and request time) for security.</li>
+  <li><b>Advertising (free version).</b> The free version may show ads from Google AdMob and its mediation partner Unity Ads. These companies may collect device identifiers (such as the advertising ID), IP address and ad-interaction data under their own privacy policies. Premium users do not see ads.</li>
+</ul>
+
+<h2>2. How we use it</h2>
+<ul>
+  <li>To run the app: sign-in, saving progress, lessons, leaderboard, chat, AI tutor and shop.</li>
+  <li>To keep the community safe: the chat word filter, reports, temporary chat bans and moderation.</li>
+  <li>To apply fair limits (energy, AI questions) and prevent abuse and fraud.</li>
+  <li>To activate and renew Premium.</li>
+  <li>To show ads in the free version.</li>
+</ul>
+<p>We do not sell your personal data.</p>
+
+<h2>3. What other users see</h2>
+<p>Your nickname, profile photo, country, level, XP, title and avatar frame are visible to other users on the leaderboard and in chat. Your email is never shown to other users.</p>
+
+<h2>4. Service providers</h2>
+<ul>
+  <li><b>Supabase</b> — database, sign-in and server functions (data hosting).</li>
+  <li><b>Google</b> — Google Sign-In, Google Play Billing, Firebase (notifications), AdMob (ads).</li>
+  <li><b>Groq</b> — generates AI tutor answers. It receives only the question text and the chosen mode and language — not your name or email.</li>
+  <li><b>Unity Ads</b> — ad mediation in the free version.</li>
+</ul>
+<p>Each provider processes data only to provide its service to us and under its own privacy policy. Data is transferred over encrypted connections (HTTPS) and may be processed outside your country.</p>
+
+<h2>5. How long we keep data</h2>
+<ul>
+  <li>Account, profile, progress, coins, items, chats and purchase records — until you delete your account.</li>
+  <li>World-chat messages — 7 days.</li>
+  <li>Technical logs — kept briefly for security; records left after account deletion contain no user ID.</li>
+</ul>
+
+<h2>6. Deleting your account</h2>
+<p>You can delete your account at any time:</p>
+<ul>
+  <li><b>In the app:</b> Profile → Settings → <i>Delete account</i> (hold the button).</li>
+  <li><b>On the web:</b> follow the steps at <a href="../delete-account/">Delete your Vira account</a>.</li>
+</ul>
+<p>Deletion is immediate and permanent: profile, progress, coins, items, messages, AI usage records, reports and purchase records are erased. Groups you own are handed to their oldest member.</p>
+<p class="note">Deleting your account does <b>not</b> cancel a Google Play subscription. Cancel it first in Google Play → Payments &amp; subscriptions → Subscriptions.</p>
+
+<h2>7. Children</h2>
+<p>Vira is intended for users aged 13 and over. We do not knowingly collect data from children under 13. If you believe a child under 13 has created an account, contact us and we will delete it.</p>
+
+<h2>8. Security</h2>
+<p>All traffic is encrypted. Access to your data on our servers is restricted by row-level security rules, and administrative keys are never included in the app.</p>
+
+<h2>9. Your rights</h2>
+<p>You can see and change your nickname and country in the app, and delete your account at any time. For any other request about your data — access, correction or deletion — write to <a class="email" href="mailto:zeroupdevelopers@gmail.com">zeroupdevelopers@gmail.com</a>. We reply within 30 days.</p>
+
+<h2>10. Changes</h2>
+<p>We will post any changes to this policy on this page and update the date above. Important changes will also be announced in the app.</p>
+</article>
+
+<!-- ───────────────────────── O'ZBEKCHA ───────────────────────── -->
+<article data-t="uz" lang="uz">
+<h1>Maxfiylik siyosati</h1>
+<p class="date">Kuchga kirgan sana: 2026-yil 27-sentabr</p>
+<p>Bu siyosat <b>Vira</b> til o'rganish ilovasi (Android, paket <code>uz.zeroup.vira</code>) qanday ma'lumot to'plashi, nima uchun, uni kim qayta ishlashi va uni qanday o'chirishingiz mumkinligini tushuntiradi. Vira'ni <b>ZeroUp</b> (O'zbekiston) ishlab chiqqan. Aloqa: <a class="email" href="mailto:zeroupdevelopers@gmail.com">zeroupdevelopers@gmail.com</a>.</p>
+
+<h2>1. Qanday ma'lumot to'playmiz</h2>
+<ul>
+  <li><b>Hisob.</b> Google orqali kirganingizda: email manzilingiz, ismingiz, profil rasmingiz va Google hisob identifikatori. Sizga ichki foydalanuvchi ID beriladi.</li>
+  <li><b>Siz belgilagan profil.</b> Taxallus, mamlakat (o'zingiz tanlaysiz, IP manzildan aniqlanmaydi) va kiygan bezaklaringiz (ramka, pasport muqovasi, unvon, muhr siyohi).</li>
+  <li><b>O'qish faoliyati.</b> O'rganayotgan tillaringiz, darslardagi natija va javoblar, XP, daraja, ketma-ket kunlar, energiya, tangalar, yutuqlar va tangaga olingan buyumlar.</li>
+  <li><b>Chat.</b> Dunyo chati, shaxsiy chatlar va guruhlarda yuborgan xabarlaringiz; bloklagan odamlaringiz; yuborgan shikoyatlaringiz. Dunyo chatidagi xabarlar 7 kundan keyin avtomatik o'chadi.</li>
+  <li><b>AI ustoz.</b> Savolingiz faqat javob tayyorlash uchun AI xizmatiga yuboriladi. Savol va javob matnini <b>saqlamaymiz</b> — kunlik limit uchun faqat hisob (rejim, til, vaqt, uzunlik) yoziladi. Agar javob ustidan shikoyat qilsangiz, uni ko'rib chiqish uchun o'sha javob va savolingiz saqlanadi.</li>
+  <li><b>Xaridlar.</b> Premium'ga obuna bo'lsangiz, to'lovni Google Play amalga oshiradi — karta ma'lumotingizni biz ko'rmaymiz. Premium'ni yoqish uchun xarid tokeni, mahsulot, tarif, holat va tugash sanasini olamiz va saqlaymiz.</li>
+  <li><b>Qurilma va texnik ma'lumot.</b> Ovoz va ilova tili kabi sozlamalar telefoningizda saqlanadi. Serverlarimiz xavfsizlik uchun qisqa muddatli texnik jurnal (masalan, IP manzil va so'rov vaqti) yuritadi.</li>
+  <li><b>Reklama (bepul versiya).</b> Bepul versiyada Google AdMob va uning hamkori Unity Ads reklamasi ko'rsatilishi mumkin. Bu kompaniyalar o'z maxfiylik siyosatiga ko'ra qurilma identifikatorlari (masalan, reklama ID), IP manzil va reklama bilan ishlash ma'lumotlarini to'plashi mumkin. Premium foydalanuvchilarga reklama ko'rsatilmaydi.</li>
+</ul>
+
+<h2>2. Nima uchun ishlatamiz</h2>
+<ul>
+  <li>Ilova ishlashi uchun: kirish, natijani saqlash, darslar, reyting, chat, AI ustoz va do'kon.</li>
+  <li>Hamjamiyat xavfsizligi uchun: chatdagi so'z filtri, shikoyatlar, vaqtincha chat taqiqi va moderatsiya.</li>
+  <li>Adolatli limitlar (energiya, AI savollar) va suiiste'mol hamda firibgarlikning oldini olish uchun.</li>
+  <li>Premium'ni yoqish va yangilash uchun.</li>
+  <li>Bepul versiyada reklama ko'rsatish uchun.</li>
+</ul>
+<p>Shaxsiy ma'lumotlaringizni sotmaymiz.</p>
+
+<h2>3. Boshqa foydalanuvchilar nimani ko'radi</h2>
+<p>Taxallusingiz, profil rasmingiz, mamlakatingiz, darajangiz, XP, unvoningiz va ramkangiz reytingda va chatda boshqalarga ko'rinadi. Email manzilingiz hech qachon boshqalarga ko'rsatilmaydi.</p>
+
+<h2>4. Xizmat ko'rsatuvchilar</h2>
+<ul>
+  <li><b>Supabase</b> — ma'lumotlar bazasi, kirish va server funksiyalari (ma'lumot saqlanadigan joy).</li>
+  <li><b>Google</b> — Google bilan kirish, Google Play to'lovlari, Firebase (bildirishnomalar), AdMob (reklama).</li>
+  <li><b>Groq</b> — AI ustoz javoblarini tayyorlaydi. Unga faqat savol matni, tanlangan rejim va til boradi — ismingiz yoki emailingiz emas.</li>
+  <li><b>Unity Ads</b> — bepul versiyada reklama vositachisi.</li>
+</ul>
+<p>Har bir xizmat ma'lumotni faqat bizga o'z xizmatini ko'rsatish uchun va o'z maxfiylik siyosatiga ko'ra qayta ishlaydi. Ma'lumotlar shifrlangan ulanish (HTTPS) orqali uzatiladi va sizning mamlakatingizdan tashqarida qayta ishlanishi mumkin.</p>
+
+<h2>5. Qancha vaqt saqlaymiz</h2>
+<ul>
+  <li>Hisob, profil, natijalar, tangalar, buyumlar, chatlar va xarid yozuvlari — hisobingizni o'chirguningizcha.</li>
+  <li>Dunyo chati xabarlari — 7 kun.</li>
+  <li>Texnik jurnallar — xavfsizlik uchun qisqa muddat; hisob o'chirilgandan keyin qolgan yozuvlarda foydalanuvchi ID bo'lmaydi.</li>
+</ul>
+
+<h2>6. Hisobni o'chirish</h2>
+<p>Hisobingizni istalgan vaqtda o'chirishingiz mumkin:</p>
+<ul>
+  <li><b>Ilovada:</b> Profil → Sozlamalar → <i>Hisobni o'chirish</i> (tugmani bosib turing).</li>
+  <li><b>Internet orqali:</b> <a href="../delete-account/">Vira hisobini o'chirish</a> sahifasidagi qadamlar bo'yicha.</li>
+</ul>
+<p>O'chirish darhol va qaytarib bo'lmas tarzda bajariladi: profil, natijalar, tangalar, buyumlar, xabarlar, AI yozuvlari, shikoyatlar va xarid yozuvlari o'chadi. Siz ochgan guruhlar eng eski a'zoga o'tadi.</p>
+<p class="note">Hisobni o'chirish Google Play obunasini <b>bekor qilmaydi</b>. Avval uni Google Play → To'lovlar va obunalar → Obunalar bo'limida bekor qiling.</p>
+
+<h2>7. Bolalar</h2>
+<p>Vira 13 yosh va undan kattalar uchun mo'ljallangan. 13 yoshgacha bo'lgan bolalardan ongli ravishda ma'lumot to'plamaymiz. Agar 13 yoshgacha bola hisob ochgan deb o'ylasangiz, bizga yozing — hisobni o'chiramiz.</p>
+
+<h2>8. Xavfsizlik</h2>
+<p>Barcha ulanishlar shifrlangan. Serverdagi ma'lumotlaringizga kirish qator darajasidagi xavfsizlik qoidalari bilan cheklangan, boshqaruv kalitlari esa ilova ichida hech qachon bo'lmaydi.</p>
+
+<h2>9. Huquqlaringiz</h2>
+<p>Taxallus va mamlakatingizni ilovada ko'rishingiz va o'zgartirishingiz, hisobingizni istalgan vaqtda o'chirishingiz mumkin. Ma'lumotlaringiz bo'yicha boshqa so'rovlar — ko'rish, tuzatish yoki o'chirish — uchun <a class="email" href="mailto:zeroupdevelopers@gmail.com">zeroupdevelopers@gmail.com</a> manziliga yozing. 30 kun ichida javob beramiz.</p>
+
+<h2>10. O'zgarishlar</h2>
+<p>Siyosatdagi har qanday o'zgarish shu sahifada e'lon qilinadi va yuqoridagi sana yangilanadi. Muhim o'zgarishlar ilovada ham xabar qilinadi.</p>
+</article>
+
+<!-- ───────────────────────── РУССКИЙ ───────────────────────── -->
+<article data-t="ru" lang="ru">
+<h1>Политика конфиденциальности</h1>
+<p class="date">Действует с 27 сентября 2026 г.</p>
+<p>Эта политика объясняет, какие данные собирает приложение для изучения языков <b>Vira</b> (Android, пакет <code>uz.zeroup.vira</code>), зачем, кто их обрабатывает и как их удалить. Разработчик Vira — <b>ZeroUp</b> (Узбекистан). Контакт: <a class="email" href="mailto:zeroupdevelopers@gmail.com">zeroupdevelopers@gmail.com</a>.</p>
+
+<h2>1. Какие данные мы собираем</h2>
+<ul>
+  <li><b>Аккаунт.</b> При входе через Google: адрес электронной почты, имя, фото профиля и идентификатор аккаунта Google. Мы создаём для вас внутренний ID пользователя.</li>
+  <li><b>Профиль, который вы заполняете.</b> Никнейм, страна (вы выбираете её сами, мы не определяем её по IP) и выбранное оформление (рамка аватара, обложка паспорта, титул, чернила штампов).</li>
+  <li><b>Учебная активность.</b> Изучаемые языки, прогресс и ответы в уроках, XP, уровень, серия дней, энергия, монеты, достижения и предметы, купленные за монеты.</li>
+  <li><b>Чат.</b> Сообщения, которые вы отправляете в мировой чат, личные чаты и группы; заблокированные вами пользователи; ваши жалобы. Сообщения мирового чата удаляются автоматически через 7 дней.</li>
+  <li><b>AI-репетитор.</b> Ваш вопрос отправляется AI-провайдеру только для генерации ответа. Мы <b>не храним</b> текст вопросов и ответов — только счётчики использования (режим, язык, время, длина) для дневных лимитов. Если вы пожалуетесь на ответ, мы сохраним этот ответ и ваш вопрос для проверки.</li>
+  <li><b>Покупки.</b> Если вы оформляете Premium, оплату проводит Google Play — данные вашей карты мы не видим. Для активации Premium мы получаем и храним токен покупки, продукт, тариф, статус и дату окончания.</li>
+  <li><b>Устройство и технические данные.</b> Настройки (звук, язык приложения) хранятся на вашем устройстве. Наши серверы ведут краткосрочные технические журналы (например, IP-адрес и время запроса) для безопасности.</li>
+  <li><b>Реклама (бесплатная версия).</b> В бесплатной версии может показываться реклама Google AdMob и его партнёра по медиации Unity Ads. Эти компании могут собирать идентификаторы устройства (например, рекламный ID), IP-адрес и данные о взаимодействии с рекламой согласно своим политикам. Пользователи Premium рекламу не видят.</li>
+</ul>
+
+<h2>2. Как мы используем данные</h2>
+<ul>
+  <li>Для работы приложения: вход, сохранение прогресса, уроки, рейтинг, чат, AI-репетитор и магазин.</li>
+  <li>Для безопасности сообщества: фильтр слов в чате, жалобы, временные запреты в чате и модерация.</li>
+  <li>Для честных лимитов (энергия, вопросы AI) и защиты от злоупотреблений и мошенничества.</li>
+  <li>Для активации и продления Premium.</li>
+  <li>Для показа рекламы в бесплатной версии.</li>
+</ul>
+<p>Мы не продаём ваши персональные данные.</p>
+
+<h2>3. Что видят другие пользователи</h2>
+<p>Ваш никнейм, фото профиля, страна, уровень, XP, титул и рамка аватара видны другим пользователям в рейтинге и в чате. Ваш email никогда не показывается другим.</p>
+
+<h2>4. Поставщики услуг</h2>
+<ul>
+  <li><b>Supabase</b> — база данных, вход и серверные функции (хостинг данных).</li>
+  <li><b>Google</b> — вход через Google, Google Play Billing, Firebase (уведомления), AdMob (реклама).</li>
+  <li><b>Groq</b> — генерирует ответы AI-репетитора. Получает только текст вопроса, выбранный режим и язык — не ваше имя и не email.</li>
+  <li><b>Unity Ads</b> — медиация рекламы в бесплатной версии.</li>
+</ul>
+<p>Каждый поставщик обрабатывает данные только для оказания нам своей услуги и согласно своей политике конфиденциальности. Данные передаются по зашифрованным соединениям (HTTPS) и могут обрабатываться за пределами вашей страны.</p>
+
+<h2>5. Сроки хранения</h2>
+<ul>
+  <li>Аккаунт, профиль, прогресс, монеты, предметы, чаты и записи о покупках — до удаления аккаунта.</li>
+  <li>Сообщения мирового чата — 7 дней.</li>
+  <li>Технические журналы — недолго, для безопасности; записи, оставшиеся после удаления аккаунта, не содержат ID пользователя.</li>
+</ul>
+
+<h2>6. Удаление аккаунта</h2>
+<p>Вы можете удалить аккаунт в любой момент:</p>
+<ul>
+  <li><b>В приложении:</b> Профиль → Настройки → <i>Удалить аккаунт</i> (удерживайте кнопку).</li>
+  <li><b>Через сайт:</b> по шагам на странице <a href="../delete-account/">Удаление аккаунта Vira</a>.</li>
+</ul>
+<p>Удаление происходит сразу и безвозвратно: профиль, прогресс, монеты, предметы, сообщения, записи AI, жалобы и записи о покупках стираются. Созданные вами группы передаются самому давнему участнику.</p>
+<p class="note">Удаление аккаунта <b>не отменяет</b> подписку Google Play. Сначала отмените её: Google Play → Платежи и подписки → Подписки.</p>
+
+<h2>7. Дети</h2>
+<p>Vira предназначена для пользователей от 13 лет. Мы сознательно не собираем данные детей младше 13 лет. Если вы считаете, что ребёнок младше 13 лет создал аккаунт, напишите нам — мы его удалим.</p>
+
+<h2>8. Безопасность</h2>
+<p>Все соединения зашифрованы. Доступ к вашим данным на сервере ограничен правилами безопасности на уровне строк, а административные ключи никогда не включаются в приложение.</p>
+
+<h2>9. Ваши права</h2>
+<p>Вы можете просматривать и менять никнейм и страну в приложении и удалить аккаунт в любой момент. По другим запросам о ваших данных — доступ, исправление или удаление — пишите на <a class="email" href="mailto:zeroupdevelopers@gmail.com">zeroupdevelopers@gmail.com</a>. Мы отвечаем в течение 30 дней.</p>
+
+<h2>10. Изменения</h2>
+<p>Все изменения политики публикуются на этой странице с обновлением даты выше. О важных изменениях мы также сообщим в приложении.</p>
+</article>
+</main>
+<script>
+  (function () {
+    var ok = ['uz', 'en', 'ru'];
+    function set(l) {
+      document.documentElement.setAttribute('data-l', l);
+      document.documentElement.lang = l;
+      document.querySelectorAll('nav button').forEach(function (b) {
+        b.setAttribute('aria-pressed', String(b.getAttribute('data-set') === l));
+      });
+      try { history.replaceState(null, '', '?lang=' + l); } catch (e) {}
+    }
+    var q = new URLSearchParams(location.search).get('lang');
+    var n = (navigator.language || 'en').slice(0, 2).toLowerCase();
+    set(ok.indexOf(q) >= 0 ? q : ok.indexOf(n) >= 0 ? n : 'en');
+    document.querySelectorAll('nav button').forEach(function (b) {
+      b.addEventListener('click', function () { set(b.getAttribute('data-set')); });
+    });
+  })();
+</script>
+</body>
+</html>
