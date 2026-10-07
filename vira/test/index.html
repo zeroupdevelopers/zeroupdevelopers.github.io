@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vira — tester bo'lish</title>
+<meta name="description" content="Vira til o'rganish ilovasini birinchilardan bo'lib sinab ko'ring: 3 ta oddiy qadam.">
+<meta property="og:title" content="Vira'ni birinchilardan bo'lib sinab ko'ring!">
+<meta property="og:description" content="Til o'rganish ilovasi sinov bosqichida. Tester bo'lish — 3 ta oddiy qadam.">
+<meta property="og:image" content="https://zeroup.uz/vira/test/vira.png">
+<meta name="theme-color" content="#2d1a78">
+<link rel="icon" href="vira.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f4f1ff; --card: #ffffff; --text: #1d1640; --muted: #5e577f;
+    --brand: #2d1a78; --accent: #6c4cf5; --accent-lip: #4f33d1; --line: #e4defa;
+    --ok: #16a34a; --ok-lip: #0f7f39; --ok-tint: #e7f8ee;
+    --warn: #fff6dc; --warn-line: #f5c84c;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #120a30; --card: #1c1245; --text: #efeaff; --muted: #b3a9d9;
+      --brand: #c9b8ff; --accent: #7d61ff; --accent-lip: #5a3fe0; --line: #2e2168;
+      --ok: #3bc46b; --ok-lip: #238a4a; --ok-tint: #12301f;
+      --warn: #2e2610; --warn-line: #8a6d1d;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 17px/1.55 "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-weight: 600;
+  }
+  main { max-width: 560px; margin: 0 auto; padding: 20px 16px 48px; }
+  .top { display: flex; align-items: center; gap: 12px; }
+  .top img { width: 52px; height: 52px; border-radius: 14px; box-shadow: 0 6px 18px rgba(45, 26, 120, .25); }
+  .top b { font-size: 24px; font-weight: 900; color: var(--brand); letter-spacing: .3px; }
+
+  .hero { margin: 22px 0 16px; }
+  h1 { font-size: 28px; line-height: 1.2; margin: 0 0 8px; font-weight: 900; }
+  .hero p { margin: 0; color: var(--muted); }
+
+  .warn {
+    background: var(--warn); border: 2px solid var(--warn-line); border-radius: 16px;
+    padding: 12px 14px; margin: 0 0 18px; display: flex; gap: 10px; align-items: flex-start;
+  }
+  .warn span { font-size: 22px; line-height: 1.2; }
+
+  .step {
+    background: var(--card); border: 2px solid var(--line); border-radius: 22px;
+    padding: 18px 16px; margin: 0 0 14px; transition: border-color .2s, opacity .2s;
+  }
+  .step.now { border-color: var(--accent); box-shadow: 0 8px 26px rgba(108, 76, 245, .16); }
+  .step.done { opacity: .72; }
+  .head { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+  .num {
+    flex: none; width: 40px; height: 40px; border-radius: 50%;
+    display: grid; place-items: center; font-weight: 900; font-size: 20px;
+    background: var(--accent); color: #fff;
+  }
+  .step.done .num { background: var(--ok); }
+  .step.done .num::before { content: "✓"; }
+  .step.done .num span { display: none; }
+  h2 { font-size: 21px; margin: 0; font-weight: 900; }
+  .step p { margin: 0 0 12px; }
+
+  /* "Mana shu tugmani bosing" — qaysi tugma ekanini ko'rsatadi. */
+  .look {
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+    background: var(--bg); border-radius: 14px; padding: 10px 12px; margin: 0 0 14px;
+    color: var(--muted); font-size: 15px;
+  }
+  .fake {
+    display: inline-block; border-radius: 8px; padding: 6px 14px; font-weight: 800; font-size: 15px;
+    font-family: Roboto, system-ui, sans-serif;
+  }
+  .fake.blue { background: #1a73e8; color: #fff; }
+  .fake.green { background: #01875f; color: #fff; }
+
+  .btn {
+    display: block; text-align: center; text-decoration: none;
+    font-weight: 900; font-size: 19px; color: #fff; background: var(--accent);
+    border-radius: 16px; padding: 15px 16px; box-shadow: 0 5px 0 var(--accent-lip);
+    transition: transform .08s, box-shadow .08s;
+  }
+  .btn:active { transform: translateY(4px); box-shadow: 0 1px 0 var(--accent-lip); }
+  .btn.green { background: var(--ok); box-shadow: 0 5px 0 var(--ok-lip); }
+  .btn.green:active { box-shadow: 0 1px 0 var(--ok-lip); }
+  .hint { margin: 12px 0 0; font-size: 15px; color: var(--muted); }
+
+  .thanks {
+    background: var(--ok-tint); border-radius: 22px; padding: 18px 16px; margin: 20px 0 14px;
+  }
+  .thanks h2 { margin-bottom: 6px; }
+  .thanks p { margin: 0 0 8px; }
+  .thanks p:last-child { margin: 0; }
+
+  details {
+    background: var(--card); border: 2px solid var(--line); border-radius: 16px;
+    padding: 12px 14px; margin: 0 0 10px;
+  }
+  summary { font-weight: 800; cursor: pointer; }
+  details p { margin: 8px 0 0; color: var(--muted); }
+  h3 { font-size: 18px; margin: 26px 0 10px; font-weight: 900; }
+
+  footer { margin-top: 28px; color: var(--muted); font-size: 14px; text-align: center; }
+  footer a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <div class="top">
+    <img src="vira.png" alt="">
+    <b>Vira</b>
+  </div>
+
+  <div class="hero">
+    <h1>Vira'ni birinchilardan bo'lib sinab ko'ring!</h1>
+    <p>Til o'rganish ilovasi hozir sinov bosqichida. Tester bo'lish — 3 ta oddiy qadam, 2 daqiqa.</p>
+  </div>
+
+  <div class="warn">
+    <span>📌</span>
+    <div>Hammasini <b>telefoningizda</b> qiling — Play Market qaysi Gmail'da bo'lsa, o'sha Gmail bilan.</div>
+  </div>
+
+  <section class="step" data-step="1">
+    <div class="head"><div class="num"><span>1</span></div><h2>Ro'yxatga qo'shiling</h2></div>
+    <p>Tugmani bosing. Ochilgan sahifada shu tugmani bosing, keyin bu sahifaga qayting:</p>
+    <div class="look">👉 <span class="fake blue">Guruhga qo'shilish</span> yoki <span class="fake blue">Join group</span></div>
+    <a class="btn" href="https://groups.google.com/g/vira-testers" target="_blank" rel="noopener">1 · Ro'yxatga qo'shilish</a>
+  </section>
+
+  <section class="step" data-step="2">
+    <div class="head"><div class="num"><span>2</span></div><h2>Tester bo'ling</h2></div>
+    <p>2–3 daqiqa kuting va tugmani bosing. Ochilgan sahifada shu tugmani bosing:</p>
+    <div class="look">👉 <span class="fake blue">Стать тестировщиком</span> yoki <span class="fake blue">Become a tester</span></div>
+    <a class="btn" href="https://play.google.com/apps/testing/uz.zeroup.vira" target="_blank" rel="noopener">2 · Tester bo'lish</a>
+    <p class="hint">⏳ «Ilova topilmadi» desa — 10 daqiqa kutib, qayta bosing. Google ro'yxatni biroz kechikib yangilaydi.</p>
+  </section>
+
+  <section class="step" data-step="3">
+    <div class="head"><div class="num"><span>3</span></div><h2>O'rnating</h2></div>
+    <p>Play Market'da Vira'ni o'rnating va oching:</p>
+    <div class="look">👉 <span class="fake green">O'rnatish</span> yoki <span class="fake green">Install</span></div>
+    <a class="btn green" href="https://play.google.com/store/apps/details?id=uz.zeroup.vira" target="_blank" rel="noopener">3 · Play Market'dan o'rnatish</a>
+  </section>
+
+  <section class="thanks">
+    <h2>🙏 Iltimos, 14 kun o'chirmang</h2>
+    <p>Vira'ni hamma uchun chiqarishimiz uchun Google kamida 14 kunlik sinovni talab qiladi.</p>
+    <p>Har kuni bir-ikki daqiqa dars qilsangiz — bizga katta yordam bo'ladi. Rahmat!</p>
+    <p>🎁 Sinovchilarga sovg'a tangalar bor.</p>
+  </section>
+
+  <h3>Savollar</h3>
+  <details>
+    <summary>«Guruhga qo'shilish» tugmasi yo'q</summary>
+    <p>Avval Google akkauntingizga kiring: sahifaning o'ng tepasida «Kirish» (Sign in) tugmasi bo'ladi.</p>
+  </details>
+  <details>
+    <summary>«Ilova topilmadi» yoki «Mavjud emas» deyapti</summary>
+    <p>1-qadamdan keyin 10–30 daqiqa kuting. Telefondagi Play Market aynan ro'yxatga qo'shilgan Gmail bilan ochilganini tekshiring.</p>
+  </details>
+  <details>
+    <summary>iPhone'da ishlaydimi?</summary>
+    <p>Hozircha faqat Android telefonlarda.</p>
+  </details>
+  <details>
+    <summary>Pul to'lash kerakmi?</summary>
+    <p>Yo'q, ilova bepul.</p>
+  </details>
+
+  <footer>
+    Savol bo'lsa: <a href="mailto:zeroupdevelopers@gmail.com">zeroupdevelopers@gmail.com</a><br>
+    <a href="../privacy/">Maxfiylik siyosati</a>
+  </footer>
+</main>
+<script>
+  // Qaysi qadam bosilgani — shu telefonda eslab qolinadi: bajarilgani
+  // "✓", navbatdagisi ajratib turadi. Saqlab bo'lmasa ham sahifa ishlaydi.
+  (function () {
+    var KALIT = 'vira_test_qadam';
+    var steps = Array.prototype.slice.call(document.querySelectorAll('.step'));
+    function oqi() {
+      try { return parseInt(localStorage.getItem(KALIT) || '0', 10) || 0; } catch (e) { return 0; }
+    }
+    function yoz(n) {
+      try { localStorage.setItem(KALIT, String(n)); } catch (e) {}
+    }
+    function chiz(n) {
+      steps.forEach(function (s) {
+        var k = parseInt(s.getAttribute('data-step'), 10);
+        s.classList.toggle('done', k <= n);
+        s.classList.toggle('now', k === n + 1);
+      });
+    }
+    var bajarilgan = oqi();
+    chiz(bajarilgan);
+    steps.forEach(function (s) {
+      var k = parseInt(s.getAttribute('data-step'), 10);
+      s.querySelector('.btn').addEventListener('click', function () {
+        if (k > bajarilgan) { bajarilgan = k; yoz(k); }
+        // Tashqi sahifa ochilgach belgilanadi — qaytganda tayyor turadi.
+        setTimeout(function () { chiz(bajarilgan); }, 400);
+      });
+    });
+  })();
+</script>
+</body>
+</html>
