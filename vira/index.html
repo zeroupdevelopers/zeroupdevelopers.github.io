@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vira — 7 tilni o'zbek tilida o'rganing</title>
+<meta name="description" content="Vira: ingliz, rus, koreys, turk, nemis, arab va fransuz tillarini o'zbek tilida bepul o'rganing.">
+<meta property="og:title" content="Vira — 7 tilni o'zbek tilida o'rganing">
+<meta property="og:description" content="A0 dan B2 gacha, bepul darslar. Google Play'dan yuklab oling.">
+<meta property="og:image" content="https://zeroup.uz/vira/test/vira.png">
+<meta name="theme-color" content="#2d1a78">
+<link rel="icon" href="test/vira.png">
+<style>
+  :root { --bg:#120a30; --card:#1c1245; --text:#efeaff; --muted:#b3a9d9; --accent:#7d61ff; --lip:#5a3fe0; --gold:#f5c84c; }
+  * { box-sizing: border-box; }
+  body { margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
+    background: radial-gradient(circle at 50% 0%, #2d1a78 0%, var(--bg) 60%); color:var(--text);
+    font: 600 17px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { width:100%; max-width:440px; padding:32px 16px; text-align:center; }
+  img { width:112px; height:112px; border-radius:26px; box-shadow:0 10px 40px rgba(125,97,255,.45); }
+  h1 { font-size:28px; margin:18px 0 6px; }
+  p { color:var(--muted); margin:0 0 6px; }
+  .flags { font-size:26px; letter-spacing:4px; margin:14px 0 22px; }
+  .btn { display:block; width:100%; padding:18px; border-radius:16px; background:var(--accent);
+    box-shadow:0 5px 0 var(--lip); color:#fff; text-decoration:none; font-size:20px; font-weight:800; }
+  .btn:active { transform:translateY(3px); box-shadow:0 2px 0 var(--lip); }
+  .alt { display:inline-block; margin-top:18px; color:var(--gold); font-size:15px; }
+  small { display:block; margin-top:22px; color:var(--muted); font-size:13px; }
+</style>
+</head>
+<body>
+<main>
+  <img src="test/vira.png" alt="Vira">
+  <h1>Vira</h1>
+  <p>7 ta tilni o'zbek tilida o'rganing</p>
+  <p>A0 dan B2 gacha · bepul darslar</p>
+  <div class="flags">🇬🇧 🇷🇺 🇰🇷 🇹🇷 🇩🇪 🇸🇦 🇫🇷</div>
+  <a class="btn" id="play" href="https://play.google.com/store/apps/details?id=uz.zeroup.vira">▶ Google Play'dan yuklab olish</a>
+  <a class="alt" id="web" href="https://play.google.com/store/apps/details?id=uz.zeroup.vira" target="_blank" rel="noopener">Ochilmasa, shu yerni bosing</a>
+  <small>Instagram ichida ochilmasa: yuqoridagi ⋮ belgisini bosib "Brauzerda ochish"ni tanlang.</small>
+</main>
+<script>
+  var id = "uz.zeroup.vira";
+  var web = "https://play.google.com/store/apps/details?id=" + id;
+  var ua = navigator.userAgent || "";
+  if (/Android/i.test(ua)) {
+    // Play Market ilovasini to'g'ridan-to'g'ri ochadi, bo'lmasa veb sahifaga qaytadi
+    var intent = "intent://details?id=" + id + "#Intent;scheme=market;package=com.android.vending;S.browser_fallback_url=" + encodeURIComponent(web) + ";end";
+    document.getElementById("play").href = intent;
+    setTimeout(function () { location.href = intent; }, 400);
+  }
+</script>
+</body>
+</html>
